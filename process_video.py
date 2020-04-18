@@ -380,7 +380,7 @@ def process_frame (image):
         ignored_framesr += 1
     '''
 
-    # the two lane markers should be roughly perpendicular, within 0.6m error on 30 meters
+    # the two lane markers should be roughly parallel, within 0.6m error on 30 meters
     mind, maxd = check_lane_distance(left_fit_world, right_fit_world)
     lane_divergence_treshold = 0.6
     if (process_state.left_fit is None or maxd-mind < lane_divergence_treshold):
