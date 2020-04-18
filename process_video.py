@@ -420,8 +420,8 @@ def process_frame (image):
     y_offset = 10
     result[y_offset:y_offset + small.shape[0], x_offset:x_offset + small.shape[1]] = small
 
-    cv2.imshow("result", cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
-    cv2.waitKey(10000)
+    #cv2.imshow("result", cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
+    #cv2.waitKey(10000)
     frameno += 1
     return result
 
