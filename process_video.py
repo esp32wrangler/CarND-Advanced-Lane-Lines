@@ -403,8 +403,8 @@ def process_frame (image):
     unwarped_highlight = unwarp(highlight)
     result = cv2.addWeighted(image, 0.7, unwarped_highlight, 0.3, 0.8, 0)
 
-    xleft = left_fit_world[0] * (720*ym_per_pix ** 2) + left_fit_world[1] * 720*ym_per_pix + left_fit_world[2]
-    xright = right_fit_world[0] * (720*ym_per_pix ** 2) + right_fit_world[1] * 720*ym_per_pix + right_fit_world[2]
+    xleft = left_fit_world[0] * ((720*ym_per_pix) ** 2) + left_fit_world[1] * 720*ym_per_pix + left_fit_world[2]
+    xright = right_fit_world[0] * ((720*ym_per_pix) ** 2) + right_fit_world[1] * 720*ym_per_pix + right_fit_world[2]
     off_center = (xleft+xright)/2-(image.shape[1]/2)*xm_per_pix
 
     #result = cv2.addWeighted(result, 0.7, unwarped, 0.8, 0.7, 0)
